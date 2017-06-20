@@ -48,7 +48,7 @@ class TeamContent extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%team_content}}';
+        return 'foot_team_content';
     }
 
     /**

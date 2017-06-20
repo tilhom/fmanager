@@ -23,7 +23,7 @@ class m170605_172255_create_foot_user_profile_table extends Migration
 
             
         ]);
-        $this->addForeignKey ('user_profile_id', 'foot_user_profile', 'userid', 'foot_user', 'id', 'CASCADE','CASCADE');
+        $this->addForeignKey ('user_profile_id', 'foot_user_profile', 'userid', 'foot_user2', 'id', 'CASCADE','CASCADE');
         $this->addPrimaryKey('foot_user_profile', 'foot_user_profile', ['userid', 'fname']);
 
     }

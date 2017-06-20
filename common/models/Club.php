@@ -25,7 +25,7 @@ class Club extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%club}}';
+        return 'foot_club';
     }
 
     /**

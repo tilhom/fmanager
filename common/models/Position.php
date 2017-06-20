@@ -20,7 +20,7 @@ class Position extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%position}}';
+        return 'foot_position';
     }
 
     /**

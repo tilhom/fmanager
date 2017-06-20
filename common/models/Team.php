@@ -31,7 +31,7 @@ class Team extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%team}}';
+        return 'foot_team';
     }
 
     /**

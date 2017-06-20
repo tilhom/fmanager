@@ -43,7 +43,7 @@ class Player extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%player}}';
+        return 'foot_player';
     }
 
     /**

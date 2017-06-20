@@ -12,6 +12,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $checkbox;
 
 
     /**
@@ -31,6 +32,7 @@ class SignupForm extends Model
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
 
+            ['checkbox', 'required'],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
         ];
@@ -41,6 +43,16 @@ class SignupForm extends Model
      *
      * @return User|null the saved model or null if saving fails
      */
+
+    public function attributeLabels()
+    {
+        return [
+            'checkbox' => 'Eslab qolish',
+            'email' => 'Elektron pochta:',
+            'password' => 'Parol:'
+        ];
+    }
+
     public function signup()
     {
         if (!$this->validate()) {
@@ -50,6 +62,7 @@ class SignupForm extends Model
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
+        $user->checkbox = $this->checkbox;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         

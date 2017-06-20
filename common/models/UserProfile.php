@@ -24,7 +24,7 @@ class UserProfile extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%user_profile}}';
+        return 'foot_user_profile';
     }
 
     /**
@@ -36,7 +36,7 @@ class UserProfile extends \yii\db\ActiveRecord
             [['userid', 'fname'], 'required'],
             [['userid'], 'integer'],
             [['fname', 'lname', 'sex', 'birthday', 'email', 'f_club'], 'string', 'max' => 255],
-            [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['userid' => 'id']],
+            [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => UserFoot::className(), 'targetAttribute' => ['userid' => 'id']],
         ];
     }
 
@@ -61,6 +61,6 @@ class UserProfile extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(User::className(), ['id' => 'userid']);
+        return $this->hasOne(UserFoot::className(), ['id' => 'userid']);
     }
 }

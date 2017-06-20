@@ -29,7 +29,7 @@ class Match extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%match}}';
+        return 'foot_match';
     }
 
     /**
