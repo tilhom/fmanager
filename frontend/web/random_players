@@ -1,0 +1,139 @@
+{
+  "rand":[
+    {
+      "id": "3",
+      "club_id": "1",
+      "name": "Rubén Yáñez",
+      "position": 1,
+      "price": 0.25,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "48",
+      "club_id": "3",
+      "name": "Miguel Ángel Moyà",
+      "position": 1,
+      "price": 2.55,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "30",
+      "club_id": "2",
+      "name": "Javier Mascherano",
+      "position": "2",
+      "price": 10.2,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "31",
+      "club_id": "2",
+      "name": "Jérémy Mathieu",
+      "position": "2",
+      "price": 4.25,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "35",
+      "club_id": "2",
+      "name": "Aleix Vidal",
+      "position": "2",
+      "price": 6.38,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "53",
+      "club_id": "3",
+      "name": "Lucas Hernández",
+      "position": "2",
+      "price": 8.5,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "76",
+      "club_id": "4",
+      "name": "Nicolás Pareja",
+      "position": "2",
+      "price": 1.28,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "83",
+      "club_id": "4",
+      "name": "Matías Kranevitter",
+      "position": "3",
+      "price": 5.1,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "84",
+      "club_id": "4",
+      "name": "Walter Montoya",
+      "position": "3",
+      "price": 4.25,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "87",
+      "club_id": "4",
+      "name": "Pablo Sarabia",
+      "position": "3",
+      "price": 8.5,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "88",
+      "club_id": "4",
+      "name": "Ganso",
+      "position": "3",
+      "price": 6.38,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "106",
+      "club_id": "5",
+      "name": "Bruno Soriano",
+      "position": "3",
+      "price": 6.8,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "116",
+      "club_id": "5",
+      "name": "Adrián López",
+      "position": "4",
+      "price": 2.98,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "117",
+      "club_id": "5",
+      "name": "Santos Borré",
+      "position": "4",
+      "price": 1.7,
+      "selected": "0",
+      "total": "0"
+    },
+    {
+      "id": "136",
+      "club_id": "6",
+      "name": "Mikel Oyarzabal",
+      "position": "4",
+      "price": 8.5,
+      "selected": "0",
+      "total": "0"
+    }
+  ]
+}

@@ -5,10 +5,11 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%club}}".
+ * This is the model class for table "foot_club".
  *
  * @property integer $id
  * @property integer $rank
+ * @property string $img
  * @property string $club
  * @property string $abbr
  * @property integer $played
@@ -25,7 +26,7 @@ class Club extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%club}}';
+        return 'foot_club';
     }
 
     /**
@@ -34,9 +35,9 @@ class Club extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['rank', 'club', 'abbr', 'played', 'points'], 'required'],
+            [['rank', 'img', 'club', 'abbr', 'played', 'points'], 'required'],
             [['rank', 'played', 'points'], 'integer'],
-            [['club', 'abbr'], 'string', 'max' => 255],
+            [['img', 'club', 'abbr'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,6 +49,7 @@ class Club extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'rank' => 'Rank',
+            'img' => 'Img',
             'club' => 'Club',
             'abbr' => 'Abbr',
             'played' => 'Played',
@@ -60,7 +62,7 @@ class Club extends \yii\db\ActiveRecord
      */
     public function getMatches()
     {
-        return $this->hasMany(Match::className(), ['team2_id' => 'id']);
+        return $this->hasMany(Match::className(), ['team1_id' => 'id']);
     }
 
     /**
@@ -68,7 +70,7 @@ class Club extends \yii\db\ActiveRecord
      */
     public function getMatches0()
     {
-        return $this->hasMany(Match::className(), ['team1_id' => 'id']);
+        return $this->hasMany(Match::className(), ['team2_id' => 'id']);
     }
 
     /**

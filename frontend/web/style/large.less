@@ -1,0 +1,965 @@
+*{
+	box-sizing: border-box;
+}
+//FONT
+@font-face {
+  font-family: "GillSans-UltraBold";
+  src: url("../fonts/Gill/GILSANUB.eot");
+  src: url("../fonts/Gill/GILSANUB.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Gill/GILSANUB.otf") format("opentype"),
+    url("../fonts/Gill/GILSANUB.svg") format("svg"),
+    url("../fonts/Gill/GILSANUB.ttf") format("truetype"), 
+    url("../fonts/Gill/GILSANUB.woff") format("woff"),
+    url("../fonts/Gill/GILSANUB.woff2") format("woff2"); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+		font-family: "MyriadProRegular";
+		src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+		src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+		url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+      font-family: "OpenSansLight";
+      src: url("../fonts/OpenSansLight/OpenSansLight.eot");
+      src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+      url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
+      url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+  }
+@font-face {
+  font-family: "HelveticaNeueLTStd-Roman";
+  src: url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd-BdCn";
+  src: url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.eot"); 
+  src: url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.otf") format("opentype"), 
+    url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.svg") format("svg"),
+    url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.ttf") format("truetype"), 
+    url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.woff") format("woff"),
+    url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.woff2") format("woff2"); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: "GothamProBlack";
+	src: url("../fonts/GothamProBlack/GothamProBlack.eot");
+	src: url("../fonts/GothamProBlack/GothamProBlack.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamProBlack/GothamProBlack.woff") format("woff"),
+	url("../fonts/GothamProBlack/GothamProBlack.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+  font-family: "Coolvetica-Regular";
+  src: url("../fonts/Colvetica/fonts/coolvetica.eot"); 
+  src: url("../fonts/Colvetica/fonts/coolvetica.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Colvetica/fonts/coolvetica.otf") format("opentype"), 
+    url("../fonts/Colvetica/fonts/coolvetica.svg") format("svg"), 
+    url("../fonts/Colvetica/fonts/coolvetica.ttf") format("truetype"), 
+    url("../fonts/Colvetica/fonts/coolvetica.woff") format("woff"), 
+    url("../fonts/Colvetica/fonts/coolvetica.woff2") format("woff2"); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: "GothamProLight";
+	src: url("../fonts/GothamProLight/GothamProLight.eot");
+	src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+	url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+.gradient{
+	background-image: -ms-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+	background-image: -moz-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+	background-image: -o-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #330B5F), color-stop(30, #3B0A5F), color-stop(65, #480860), color-stop(82.5, #520661), color-stop(91.25, #520661), color-stop(100, #520661));
+	background-image: -webkit-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+	background-image: linear-gradient(to bottom, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+}	
+@fifa:"GillSans-UltraBold";
+@helvetica:"HelveticaNeueLTStd-Roman";
+@regular:"MyriadProRegular";
+@violet:#3e0960;
+@button:#4c0760;
+@helvetica-bold:"HelveticaNeueLTStd-BdCn";
+@h-light:"HelveticaNeueLTStd-Lt";
+@o-light:"OpenSansLight";
+@colvetica:"Coolvetica-Regular";
+@gotham-black:"GothamProBlack";
+@gotham-light:"GothamProLight";
+.paddingsiz{
+	padding: 0px;
+}
+// *** REGISTRATSIYA OYNASI STILLARI
+header{
+	.gradient;
+	.container{
+		padding: 0px;
+		width: 1200px;
+	}
+	padding-top: 30px;
+	
+	img{
+		width: 84%;
+	}
+	color: white;
+	h2{
+		font-size: 36px;
+		font-family: @fifa;
+		line-height: 30px;
+	}
+	h4{
+		font-family: 'MS Reference Sans Serif';
+		font-size: 30px;
+		line-height: 15px;
+	}
+	h5{
+		color: #DF9112;
+		font-family: @helvetica-bold;
+		text-transform: uppercase;
+		img{
+			width: auto;
+			margin-left: 5px;
+		}
+	}
+	p{
+		font-size: 18px;
+		font-family: @helvetica;
+		padding-top: 10px;
+	}
+	.list-group{
+		background: none;
+		a{
+			&:hover, &:focus{
+				text-decoration: none;
+			}
+		}
+		.dropdown{
+			background: white;
+			text-align: center;
+			margin-left: 10px;
+			border-radius: 3px;
+			padding: 5px 0px;
+			width: 89px;
+			a{
+				color: black;
+				font-size: 14px;
+				font-family: @regular;
+			}
+		}
+		.dropdown-menu{
+			min-width: 89px;
+		}
+		li{
+			background: none;
+			border: none;
+			a{
+				color: white;
+				font-size: 15px;
+				font-family: @helvetica;
+			}
+		}
+		.kirish{
+			margin-top: 12px;
+		}
+	}
+}
+
+.maydon{
+	margin-top: 20px;
+	.jamoa{
+		p{
+			font-size: 18px;
+			color: @violet;
+			font-family: @helvetica-bold;
+		}
+	}
+	.jadval{
+		border: 1px solid @violet;
+		text-align: center;
+		border-radius: 7px;
+		padding-top: 5px;
+		padding-bottom: 10px;
+		h5{
+			font-size: 14px;
+			color: black;
+			font-family: @helvetica;
+			line-height: 18px;
+		}
+		h1{
+			color: black;
+			font-size: 38px;
+			font-family: @helvetica;
+			line-height: 20px;
+		}
+		h6{
+			font-size: 16px;
+			text-transform: uppercase;
+			color: @violet;
+			font-family: @helvetica-bold;
+		}
+	}
+
+	.tugmalar{
+		margin-top: 12px;
+		button{
+			width:85%;
+			text-transform: uppercase;
+			background: @button;
+			color: white;
+			font-size: 15px;
+			font-family: @helvetica;
+			border: 1px solid @violet;
+			transition: 1s;
+			cursor: pointer;
+			&:hover, &:focus{
+				background: white;
+				border: 1px solid @violet;
+				color: @violet;
+			}
+		}
+		.col-md-4{
+			&:last-child{
+				text-align: right;
+			}
+		}
+	}
+	.tugmalar2{
+		text-align: center;
+		button{
+			width: 48%;
+		}
+	}
+	.stadion{
+		position: relative;
+		.yashil{
+			height: 500px;
+			margin-left: -10%;
+			margin-right: -10%;
+			margin-top: -15px;
+			background: url('../image/stadion.png');
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			text-align: center;
+		}
+		.qator{
+			padding-top: 25px;
+		}
+		.col-md-2{
+			text-align: center;
+			width: 14.7%;
+		}
+		.center-block{
+			display:inline-block;
+   		    float:none;
+		}
+		.fudbolchi{
+			position: relative;
+		}
+		img{
+			width: 90%;
+		}
+		.razmer{
+			margin-left:4.166666667%
+		}
+		.darvoza{
+			text-align: center;
+		}
+		.uyinchi{
+			margin-top: 46px;
+		}
+		.glyphicon-info-sign{
+			font-size: 18px;
+			color: @violet;
+		}
+		.glyphicon-remove-sign{
+			font-size: 18px;
+			color: yellow;
+			margin-left: 2px;
+		}
+		.malumot{
+			position: absolute;
+			top: -24%;
+			left: 23%;
+		}
+		.about{
+			position: absolute;
+			top: 70%;
+			left: 0%;
+			color: white;
+			font-family: @helvetica;
+			width: 85px;
+			.ism{
+				background: rgba(86,5,97,0.5);
+				font-size: 12px;
+			}
+			.raqam{
+				background: rgba(86,5,97,1);
+				font-size: 13px;
+			}
+		}
+	}
+	.jamoa_nomi{
+		margin-top: 40px;
+		.satr{
+			color: black;
+			font-size: 16px;
+			font-family: @helvetica;
+			padding-top: 5px;
+			text-align: right;
+			padding-right: 50px;
+		}
+		.form-control{
+			border:1px solid @violet;
+			margin-bottom: 15px;
+			width: 85%;
+			color: @violet;
+			font-size: 14px;
+		}
+		.checkbox{
+			text-align: center;
+			font-family: @helvetica;
+			font-size: 15px;
+			padding-left: 20px;
+			a{
+				color: @violet;
+				&:hover, &:focus{
+					text-decoration: none;
+				}
+			}
+		}
+		.tasdiqlash{
+			text-align: center;
+			button{
+				background: @violet;
+				color: white;
+				font-size: 15px;
+				font-family: @helvetica;
+				padding: 6px 50px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				border: 1px solid @violet;
+				transition: 1s;
+				&:hover, &:focus{
+					background: white;
+					border: 1px solid @violet;
+					color: @violet;
+				}
+			}
+		}
+		.eslatma{
+			color: #CB3636;
+			font-size: 15px;
+			text-align: center;
+			font-family: @o-light;
+		}
+	}
+	.zahira{
+		background: #e8e8e8;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		margin-left: -10%;
+		width: 120%;
+       .fudbolchi{
+			position: relative;
+		}
+		.first{
+			border-right: 1px solid #cacaca;
+		}
+		img{
+			width: 50%;
+			text-align: center;
+
+		}
+		p{
+			padding-top: 10px;
+			font-size: 15px;
+		}
+		.glyphicon-info-sign{
+			font-size: 16px;
+			color: @violet;
+		}
+		.glyphicon-remove-sign{
+			font-size: 16px;
+			color: yellow;
+			margin-left: 2px;
+		}
+		.bottom-top{
+			width: 17px;
+			margin-top: -7px;
+		}
+		.malumot{
+			position: absolute;
+			top: -24%;
+			left: 37%;
+		}
+		.about{
+			position: absolute;
+			text-align: center;
+			top: 70%;
+			left: 23%;
+			color: white;
+			font-family: @helvetica;
+			width: 85px;
+			.ism{
+				background: rgba(86,5,97,0.5);
+				font-size: 12px;
+			}
+			.raqam{
+				background: rgba(86,5,97,1);
+				font-size: 13px;
+			}
+		}
+	}
+	.hisob{
+		.kiyim{
+		display: inline-block;
+		vertical-align: middle;
+		img{
+			width: 17px;
+			height: 19px;
+		}
+	}
+	.ruyhat{
+		font-family:@helvetica;
+		.sana{
+			background:@button;
+			text-align: center;
+			color: white;
+			font-size: 12px;
+			padding: 3px 10px;
+		}
+	}
+	.musobaqa{
+		font-family: @gotham-light;
+		font-size: 13px;
+		.komanda{
+			height: 33px;
+			padding-top:8px;
+		}
+		.mezbon,.mehmon{
+			padding:0px !important;
+		}
+		.mezbon{
+			padding-right:0px;
+			text-align: right;
+		}
+		.mehmon{
+			padding-left:0px;
+			text-align: left;
+		}
+		.xisob{
+			color: #696969;
+			font-weight: 400;
+			display: inline-block;
+			font-size: 12px;
+			padding-top: 2px;
+			width: 60px;
+		}
+		.page{
+			background: @button;;
+			font-size: 12px;
+			padding: 3px 10px;
+			a{
+				color: white;
+				&:hover,&:focus{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}	
+.panel1{
+		margin-top: 28px;
+		margin-bottom: 0px;
+		.panel-heading{
+			background: @button;
+			color: white;
+			font-family: @helvetica;
+			font-size: 15px;
+			height: 55px;
+			.btn{
+				width: 100%;
+				background: white;
+				color: @button;
+				.glyphicon-arrow-left{
+					text-align: left;
+				}
+
+			}
+		}
+		.panel-body{
+			padding-right: 0px;
+			padding-bottom: 10px;
+			border: 1px solid @button;
+			border-radius:0px 0px 5px 5px;
+			padding: 0px;
+		}
+		.uyinchi,.ochko,.max_narx{
+			padding-top: 4px;
+			padding-right: 0px;
+		}
+		.fudbolchi{
+			font-size: 14px;
+			font-family: @helvetica;
+			margin-left: -10px;
+			margin-top: 3px;
+			color: #8c8c8c;
+			display: inline-block;
+		}
+
+		.tanlash{
+			padding-right: 0px;
+		}
+
+		select{
+			width: 90%;
+			border: 1px solid @button;
+			border-radius: 4px;
+			font-size: 14px;
+			font-family: @helvetica;
+			color: #8c8c8c;
+			padding: 0px 5px;
+			outline: 0;
+			background: url("../image/select.png") 95% 50% no-repeat;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin-bottom: 5px;
+			margin-left: 20px;
+			&:hover,&:focus{
+				box-shadow: none;
+			}
+		}
+		.form-control{
+			height: 25px;
+		}
+		option{
+			background: white;
+			color: black;
+		}
+		.komandalar{
+			// background: @select_komanda;
+		}
+}
+.narxlar{
+	margin-top: 20px;
+	.bordered {
+	    border: 1px solid @button;
+	    border-bottom: none;	
+	}
+	.table{
+		border-collapse: separate !important;
+		border-radius: 5px 5px 0px 0px;
+		font-family: @helvetica;
+		border-bottom: none;
+		.sarlavha{
+			background: @button;
+			color: white;
+			th{
+				border-bottom: none;
+			}
+			a{
+				color: white;
+			}
+		}
+		td{
+			border: none;
+			color: #8c8c8c;
+			a{
+				color: #8c8c8c;
+				&:hover, &:focus{
+					color: @button;
+					text-decoration: none;
+				}
+			}
+		}
+		.button{
+			width: 20px;
+		}
+		.info{
+			width: 17px;
+			height: 17px;
+			border-radius: 100%;
+		}
+		.yomon{
+			background:#FF0101;
+		}
+		.yahshi{
+			background: #10BC12;
+		}
+		.kasal{
+			background: #FFFC01;
+		}
+	}
+	.varoqlash{
+		margin-top: -30px;
+		border: 1px solid @button;
+		border-top: none;
+		border-radius: 0px 0px 5px 5px;
+		.pagination{
+			margin-bottom: 5px;
+			a{
+				border: none;
+				color: #A4A4A4;
+				font-family: @helvetica;
+				font-size: 15px;
+				&:hover, &:focus{
+					color: @button;
+					background: none;
+				}
+			}
+		}
+	}
+}
+.narxlar2{
+	a{
+		&:hover,&:focus{
+			text-decoration: none;
+		}
+	}
+	
+	.table{
+		border-bottom: 1px solid @button;
+		border-radius: 6px 6px 6px 6px;
+		font-family: @helvetica;
+		padding-bottom: 10px;
+		.sarlavha{
+			&:first-child{
+				padding-top: 10px;
+				padding-bottom: 16px;
+			}
+		}
+		.text-center{
+			color: black;
+			text-align: right;
+		}
+		.uzliga{
+			padding-bottom: 15px;
+		}
+		tbody{
+			.uyinlar,.ball{
+				color: black;
+				text-align: center;
+			}
+		}
+		.text-left{
+			img{
+				width: 6px;
+			}
+		}
+		.tepaga,.pastga{
+			img{
+				width: 10px;
+				margin-right: 5px;
+			}
+		}
+	}
+}
+}
+	.scroli{
+		height: 640px;
+		overflow: auto;
+	}
+
+footer{
+	.gradient;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.komanda{
+		width: 60%;
+		opacity: 0.2;
+		position: absolute;
+		left: 20%;
+		height: 44%;
+	}
+	.yozuvi{
+		color: white;
+		font-family: @helvetica;
+		font-size: 14px;
+		h2{
+			font-size: 34px;
+			font-family: @fifa;
+			line-height: 30px;
+		}
+		h4{
+			font-family: 'MS Reference Sans Serif';
+			font-size: 30px;
+			line-height: 15px;
+		}
+	}
+	.bir{
+		p{
+			padding-top: 40px;
+		}
+	}
+	.ikki{
+		text-align: center;
+		padding-top: 10px;
+		padding-left: 20px;
+		ul{
+			text-align: left;
+			li{
+				padding-top: 15px;
+				a{
+					color: white;
+					font-family: @helvetica;
+					font-size: 16px;
+					&:hover, &:focus{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.ikonka{
+			background: white;
+			width: 28px;
+			height: 28px;
+			display: inline-block;
+			border-radius: 100%;
+			z-index: 100;
+			margin-left: 10px;
+			&:first-child{
+				margin-left: 0px;
+			}
+			&:hover, &:focus{
+				background: #00C419;
+			}
+			img{
+				width: 100%;
+			}
+		}
+		.sotsial{
+			text-align: left;
+			margin-top: 15px;
+		}
+	}
+	.uch{
+		text-align: center;
+		img{
+			width: 130px;
+		}
+	}
+	.eslatma{
+		border-top: 1px solid white;
+		padding-top: 15px;
+		color: white;
+		font-size: 14px;
+		font-family: @helvetica;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+// REGISTIRATSIYA OYNASI STILLARI TUGADI
+// 
+// ***IKKINCHI SAHIFA STILLARI
+.menyu{
+	background: #FFFF00;
+	.navbar-default{
+		background: none;
+		border: none;
+		margin-bottom: 0px;
+		.navbar-header{
+			button{
+				background: yellow;
+				border: 1px solid @button;
+				float: none;
+				span{
+					background: @button;
+					color: @button;
+				}
+			}
+		}
+		.navbar-collapse{
+			padding-left: 0px;
+		}
+		li{
+			position: relative;
+			img{
+				width: 30px;
+				left: 18%;
+			}
+			a{
+				color: @violet;
+				border-radius: 20px;
+				font-size: 17px;
+				font-weight: 500;
+				text-transform: uppercase;
+				font-family: Tahoma;
+				&:hover,&:focus{
+					color: @violet;
+					img{
+					 -webkit-animation-name: yunalish, animatsiya;
+					  animation-name: yunalish, animatsiya;
+					  -webkit-animation-duration: .2s, 1s;
+					  animation-duration: .2s, 1s;
+					  -webkit-animation-delay: 0s, .2s;
+					  animation-delay: 0s, .2s;
+					  -webkit-animation-timing-function: ease-out, ease-in-out;
+					  animation-timing-function: ease-out, ease-in-out;
+					  -webkit-animation-iteration-count: 1, infinite;
+					  animation-iteration-count: 1, infinite;
+					  -webkit-animation-fill-mode: forwards;
+					  animation-fill-mode: forwards;
+					  -webkit-animation-direction: normal, alternate;
+					  animation-direction: normal, alternate;
+					}
+			    }
+			}
+		}
+	}@-webkit-keyframes animatsiya {
+	  0% {
+	    -webkit-transform: translateY(-10px);
+	    transform: translateY(-10px);
+	  }
+	  50% {
+	    -webkit-transform: translateY(-4px);
+	    transform: translateY(-4px);
+	  }
+	  100% {
+	    -webkit-transform: translateY(-10px);
+	    transform: translateY(-10px);
+	  }
+	}
+	@keyframes animatsiya {
+	  0% {
+	    -webkit-transform: translateY(-8px);
+	    transform: translateY(-8px);
+	  }
+	  50% {
+	    -webkit-transform: translateY(-4px);
+	    transform: translateY(-4px);
+	  }
+	  100% {
+	    -webkit-transform: translateY(-8px);
+	    transform: translateY(-8px);
+	  }
+	}
+	@-webkit-keyframes yunalish {
+	  100% {
+	    -webkit-transform: translateY(-8px);
+	    transform: translateY(-8px);
+	  }
+	}
+	@keyframes yunalish {
+	  100% {
+	    -webkit-transform: translateY(-8px);
+	    transform: translateY(-8px);
+	  }
+	}
+}
+.dedlayn{
+	margin-top: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+	.container{
+		color: @violet;
+		background: #ebebeb;
+		border-radius: 8px;
+		padding: 10px 0px;
+	}
+	.tur{
+		font-size: 18px;
+		text-align: center;
+		font-family: @helvetica-bold;
+		p{
+			font-size: 40px;
+			padding-top: 10px;	
+			font-family: @helvetica;
+		}
+	}
+	.dedline,.news{
+		font-size:18px;
+		text-align: center;
+		font-family: @helvetica-bold;
+		p{
+			font-family: @gotham-light;
+			color: black;
+			font-size: 16px;
+		}
+		.status{
+			font-size:18px;
+			text-align: center;
+			font-family: @helvetica-bold;
+			padding-bottom: 15px;
+		}
+		.tugmalar{
+			margin-top: 9px;
+			button{
+				text-transform: capitalize;
+				background: @button;
+				color: white;
+				font-size: 14px;
+				font-family: @helvetica;
+				border: 1px solid @violet;
+				transition: 1s;
+				cursor: pointer;
+				&:hover, &:focus{
+					background: white;
+					border: 1px solid @violet;
+					color: @violet;
+				}
+			}
+		}
+		.tugmalar2{
+			text-align: center;
+		}	
+		select{
+			width: 90%;
+			border: 1px solid @button;
+			border-radius: 4px;
+			font-size: 14px;
+			font-family: @helvetica;
+			color: @violet;
+			padding: 0px 5px;
+			outline: 0;
+			background: url("../image/select.png") 95% 50% no-repeat;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin-bottom: 5px;
+			margin-left: 20px;
+			&:hover,&:focus{
+				box-shadow: none;
+			}
+		}
+	}
+	.statuss{
+		font-family: @helvetica;
+		font-size: 16px;
+		font-weight: 700;
+		h3{
+			color: red;
+			font-family:@helvetica-bold;
+			font-size: 30px;
+		}
+	}
+	.news{
+		span{
+			color: red;
+			padding-right: 10px;
+		}
+		p{
+			color: @violet;
+		}
+	}
+}

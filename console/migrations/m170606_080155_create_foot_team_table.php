@@ -25,7 +25,7 @@ class m170606_080155_create_foot_team_table extends Migration
 
             
         ]);
-        $this->addForeignKey ('foot_team_id', 'foot_team', 'userid', 'foot_user', 'id', 'CASCADE','CASCADE');
+        $this->addForeignKey ('foot_team_id', 'foot_team', 'userid', 'foot_user2', 'id', 'CASCADE','CASCADE');
         $this->addPrimaryKey('foot_team', 'foot_team', ['name', 'overall_points']);
 
     }

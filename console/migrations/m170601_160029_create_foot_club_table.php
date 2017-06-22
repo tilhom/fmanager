@@ -14,6 +14,7 @@ class m170601_160029_create_foot_club_table extends Migration
     {
         $this->createTable('foot_club', [
         'id' => 'pk',
+        'img'=>'string',
         'rank' => 'integer NOT NULL',
         'club' => 'string NOT NULL',
         'abbr' => 'string NOT NULL',
