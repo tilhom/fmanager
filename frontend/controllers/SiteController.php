@@ -12,6 +12,10 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\data\ActiveDataProvider;
+use common\models\search\PlayerSearch;
+use common\models\search\ClubSearch;
+use common\models\search\MatchSearch;
 
 /**
  * Site controller
@@ -30,6 +34,11 @@ class SiteController extends Controller
                 'rules' => [
                     [
                         'actions' => ['signup'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['second'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -72,7 +81,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new ClubSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);   
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('index', [
+            'model' => $model, 'searchModel'=>$searchModel,
+            'dataProvider'=>$dataProvider,
+        ]); 
+        
     }
 
     /**
@@ -141,6 +165,23 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+    public function actionSecond()
+    {
+        $searchModel = new ClubSearch();
+        $searchModel2 = new MatchSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider2 = $searchModel2->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=20;
+
+        
+        return $this->render('second', [
+            'searchModel'=>$searchModel,
+            'searchModel2'=>$searchModel2,
+            'dataProvider'=>$dataProvider,
+            'dataProvider2'=>$dataProvider2,
+        ]);
+    }
+
     /**
      * Signs user up.
      *
@@ -148,6 +189,10 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
+        $searchModel = new PlayerSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=5;
+
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
@@ -158,9 +203,11 @@ class SiteController extends Controller
         }
 
         return $this->render('signup', [
-            'model' => $model,
+            'model' => $model, 'searchModel'=>$searchModel,
+            'dataProvider'=>$dataProvider,
         ]);
     }
+
 
     /**
      * Requests password reset.
@@ -210,4 +257,31 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionReg()
+{
+    $model = new RegForm();
+    if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        if ($user = $model->reg()) {
+            if ($user->status === User::STATUS_ACTIVE) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            } else {
+                if ($model->sendActivationEmail($user)) {
+                    Yii::$app->session->setFlash('success', 'Activation mail was sent to email <strong>' . Html::encode($user->email) . '</strong> (check spam folder).');
+                } else {
+                    Yii::$app->session->setFlash('error', 'Error.');
+                    Yii::error('Mail send error.');
+                }
+                return $this->refresh();
+            }
+        } else {
+            Yii::$app->session->setFlash('error', 'Reg error.');
+            Yii::error('Reg error');
+            return $this->refresh();
+        }
+    }
+    return $this->render('reg', ['model' => $model]);
+}
 }

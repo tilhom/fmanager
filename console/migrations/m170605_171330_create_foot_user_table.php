@@ -12,7 +12,7 @@ class m170605_171330_create_foot_user_table extends Migration
      */
     public function up()
     {
-        $this->createTable('foot_user', [
+        $this->createTable('foot_user2', [
             'id' => 'pk',
             'phone' => 'integer',
             'password' => 'string',
@@ -24,6 +24,6 @@ class m170605_171330_create_foot_user_table extends Migration
 
     public function down()
     {
-        $this->dropTable('foot_user');
+        $this->dropTable('foot_user2');
     }
 }

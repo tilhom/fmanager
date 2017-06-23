@@ -17,6 +17,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -35,9 +36,23 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+
+    ['label' => 'CRUD', 'items' => [
+        ['label' => 'club', 'url' => ['/club/index']],
+        ['label' => 'player', 'url' => ['/player/index']],
+        ['label'=>'match', 'url'=>['match/index']],
+        ['label'=>'player-match', 'url'=>['player-match/index']],
+        ['label'=>'position', 'url'=>['position/index']],
+        ['label'=>'team', 'url'=>['team/index']],
+        ['label'=>'team-content', 'url'=>['team-content/index']],
+        ['label'=>'team-match', 'url'=>['team-match/index']],
+        ['label'=>'user-foot', 'url'=>['user-foot/index']],
+        ['label'=>'user-profile', 'url'=>['user-profile/index']],
+            ]],
+    ['label' => 'Home', 'url' => ['site/index']],
+            ];
     if (Yii::$app->user->isGuest) {
+        $menuItems[]=['label'=>'Registratsiya', 'url'=>['/site/reg']];        
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
