@@ -1,0 +1,1546 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "GillSans-UltraBold";
+  src: url("../fonts/Gill/GILSANUB.eot");
+  src: url("../fonts/Gill/GILSANUB.eot?#iefix") format("embedded-opentype"), url("../fonts/Gill/GILSANUB.otf") format("opentype"), url("../fonts/Gill/GILSANUB.svg") format("svg"), url("../fonts/Gill/GILSANUB.ttf") format("truetype"), url("../fonts/Gill/GILSANUB.woff") format("woff"), url("../fonts/Gill/GILSANUB.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSansLight/OpenSansLight.eot");
+  src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd-Roman";
+  src: url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.otf") format("opentype"), /* Open Type Font */ url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.svg") format("svg"), /* Legacy iOS */ url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.ttf") format("truetype"), /* Safari, Android, iOS */ url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.woff") format("woff"), /* Modern Browsers */ url("../fonts/HelveticaRoman/HelveticaNeueLTStd-Roman.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueLTStd-BdCn";
+  src: url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.eot");
+  src: url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.otf") format("opentype"), url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.svg") format("svg"), url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.ttf") format("truetype"), url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.woff") format("woff"), url("../fonts/HelveticaCnBold/HelveticaNeueLTStd-BdCn.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamProBlack";
+  src: url("../fonts/GothamProBlack/GothamProBlack.eot");
+  src: url("../fonts/GothamProBlack/GothamProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBlack/GothamProBlack.woff") format("woff"), url("../fonts/GothamProBlack/GothamProBlack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Coolvetica-Regular";
+  src: url("../fonts/Colvetica/fonts/coolvetica.eot");
+  src: url("../fonts/Colvetica/fonts/coolvetica.eot?#iefix") format("embedded-opentype"), url("../fonts/Colvetica/fonts/coolvetica.otf") format("opentype"), url("../fonts/Colvetica/fonts/coolvetica.svg") format("svg"), url("../fonts/Colvetica/fonts/coolvetica.ttf") format("truetype"), url("../fonts/Colvetica/fonts/coolvetica.woff") format("woff"), url("../fonts/Colvetica/fonts/coolvetica.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.gradient {
+  background-image: -ms-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -moz-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -o-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #330B5F), color-stop(30, #3B0A5F), color-stop(65, #480860), color-stop(82.5, #520661), color-stop(91.25, #520661), color-stop(100, #520661));
+  background-image: -webkit-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: linear-gradient(to bottom, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+}
+.paddingsiz {
+  padding: 0px;
+}
+header {
+  background-image: -ms-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -moz-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -o-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #330B5F), color-stop(30, #3B0A5F), color-stop(65, #480860), color-stop(82.5, #520661), color-stop(91.25, #520661), color-stop(100, #520661));
+  background-image: -webkit-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: linear-gradient(to bottom, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  padding-top: 30px;
+  color: white;
+}
+header .container {
+  padding: 0px;
+  width: 1200px;
+}
+header img {
+  width: 84%;
+}
+header h2 {
+  font-size: 36px;
+  font-family: "GillSans-UltraBold";
+  line-height: 30px;
+}
+header h4 {
+  font-family: 'MS Reference Sans Serif';
+  font-size: 30px;
+  line-height: 15px;
+}
+header h5 {
+  color: #DF9112;
+  font-family: "HelveticaNeueLTStd-BdCn";
+  text-transform: uppercase;
+}
+header h5 img {
+  width: auto;
+  margin-left: 5px;
+}
+header p {
+  font-size: 18px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  padding-top: 10px;
+}
+header .list-group {
+  background: none;
+}
+header .list-group a:hover,
+header .list-group a:focus {
+  text-decoration: none;
+}
+header .list-group .dropdown {
+  background: white;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 3px;
+  padding: 5px 0px;
+  width: 89px;
+}
+header .list-group .dropdown a {
+  color: black;
+  font-size: 14px;
+  font-family: "MyriadProRegular";
+}
+header .list-group .dropdown-menu {
+  min-width: 89px;
+}
+header .list-group li {
+  background: none;
+  border: none;
+}
+header .list-group li a {
+  color: white;
+  font-size: 15px;
+  font-family: "HelveticaNeueLTStd-Roman";
+}
+header .list-group .kirish {
+  margin-top: 12px;
+}
+.maydon {
+  margin-top: 20px;
+}
+.maydon .jamoa p {
+  font-size: 18px;
+  color: #3e0960;
+  font-family: "HelveticaNeueLTStd-BdCn";
+}
+.maydon .jadval {
+  border: 1px solid #3e0960;
+  text-align: center;
+  border-radius: 7px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.maydon .jadval h5 {
+  font-size: 14px;
+  color: black;
+  font-family: "HelveticaNeueLTStd-Roman";
+  line-height: 18px;
+}
+.maydon .jadval h1 {
+  color: black;
+  font-size: 38px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  line-height: 20px;
+}
+.maydon .jadval h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #3e0960;
+  font-family: "HelveticaNeueLTStd-BdCn";
+}
+.maydon .tugmalar {
+  margin-top: 12px;
+}
+.maydon .tugmalar button {
+  width: 85%;
+  text-transform: uppercase;
+  background: #4c0760;
+  color: white;
+  font-size: 15px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  border: 1px solid #3e0960;
+  transition: 1s;
+  cursor: pointer;
+}
+.maydon .tugmalar button:hover,
+.maydon .tugmalar button:focus {
+  background: white;
+  border: 1px solid #3e0960;
+  color: #3e0960;
+}
+.maydon .tugmalar .col-md-4:last-child {
+  text-align: right;
+}
+.maydon .tugmalar2 {
+  text-align: center;
+}
+.maydon .tugmalar2 button {
+  width: 48%;
+}
+.maydon .stadion {
+  position: relative;
+}
+.maydon .stadion .yashil {
+  height: 500px;
+  margin-left: -10%;
+  margin-right: -10%;
+  margin-top: -15px;
+  background: url('../image/stadion.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.maydon .stadion .qator {
+  padding-top: 25px;
+}
+.maydon .stadion .col-md-2 {
+  text-align: center;
+  width: 14.7%;
+}
+.maydon .stadion .center-block {
+  display: inline-block;
+  float: none;
+}
+.maydon .stadion .fudbolchi {
+  position: relative;
+}
+.maydon .stadion img {
+  width: 90%;
+}
+.maydon .stadion .razmer {
+  margin-left: 4.16666667%;
+}
+.maydon .stadion .darvoza {
+  text-align: center;
+}
+.maydon .stadion .uyinchi {
+  margin-top: 46px;
+}
+.maydon .stadion .glyphicon-info-sign {
+  font-size: 18px;
+  color: #3e0960;
+}
+.maydon .stadion .glyphicon-remove-sign {
+  font-size: 18px;
+  color: yellow;
+  margin-left: 2px;
+}
+.maydon .stadion .malumot {
+  position: absolute;
+  top: -24%;
+  left: 23%;
+}
+.maydon .stadion .about {
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  color: white;
+  font-family: "HelveticaNeueLTStd-Roman";
+  width: 85px;
+}
+.maydon .stadion .about .ism {
+  background: rgba(86, 5, 97, 0.5);
+  font-size: 12px;
+}
+.maydon .stadion .about .raqam {
+  background: #560561;
+  font-size: 13px;
+}
+.maydon .jamoa_nomi {
+  margin-top: 40px;
+}
+.maydon .jamoa_nomi .satr {
+  color: black;
+  font-size: 16px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  padding-top: 5px;
+  text-align: right;
+  padding-right: 50px;
+}
+.maydon .jamoa_nomi .form-control {
+  border: 1px solid #3e0960;
+  margin-bottom: 15px;
+  width: 85%;
+  color: #3e0960;
+  font-size: 14px;
+}
+.maydon .jamoa_nomi .checkbox {
+  text-align: center;
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 15px;
+  padding-left: 20px;
+}
+.maydon .jamoa_nomi .checkbox a {
+  color: #3e0960;
+}
+.maydon .jamoa_nomi .checkbox a:hover,
+.maydon .jamoa_nomi .checkbox a:focus {
+  text-decoration: none;
+}
+.maydon .jamoa_nomi .tasdiqlash {
+  text-align: center;
+}
+.maydon .jamoa_nomi .tasdiqlash button {
+  background: #3e0960;
+  color: white;
+  font-size: 15px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  padding: 6px 50px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #3e0960;
+  transition: 1s;
+}
+.maydon .jamoa_nomi .tasdiqlash button:hover,
+.maydon .jamoa_nomi .tasdiqlash button:focus {
+  background: white;
+  border: 1px solid #3e0960;
+  color: #3e0960;
+}
+.maydon .jamoa_nomi .eslatma {
+  color: #CB3636;
+  font-size: 15px;
+  text-align: center;
+  font-family: "OpenSansLight";
+}
+.maydon .zahira {
+  background: #e8e8e8;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-left: -10%;
+  width: 120%;
+}
+.maydon .zahira .fudbolchi {
+  position: relative;
+}
+.maydon .zahira .first {
+  border-right: 1px solid #cacaca;
+}
+.maydon .zahira img {
+  width: 50%;
+  text-align: center;
+}
+.maydon .zahira p {
+  padding-top: 10px;
+  font-size: 15px;
+}
+.maydon .zahira .glyphicon-info-sign {
+  font-size: 16px;
+  color: #3e0960;
+}
+.maydon .zahira .glyphicon-remove-sign {
+  font-size: 16px;
+  color: yellow;
+  margin-left: 2px;
+}
+.maydon .zahira .bottom-top {
+  width: 17px;
+  margin-top: -7px;
+}
+.maydon .zahira .malumot {
+  position: absolute;
+  top: -24%;
+  left: 37%;
+}
+.maydon .zahira .about {
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 23%;
+  color: white;
+  font-family: "HelveticaNeueLTStd-Roman";
+  width: 85px;
+}
+.maydon .zahira .about .ism {
+  background: rgba(86, 5, 97, 0.5);
+  font-size: 12px;
+}
+.maydon .zahira .about .raqam {
+  background: #560561;
+  font-size: 13px;
+}
+.maydon .hisob .kiyim {
+  display: inline-block;
+  vertical-align: middle;
+}
+.maydon .hisob .kiyim img {
+  width: 17px;
+  height: 19px;
+}
+.maydon .hisob .ruyhat {
+  font-family: "HelveticaNeueLTStd-Roman";
+}
+.maydon .hisob .ruyhat .sana {
+  background: #4c0760;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  padding: 3px 10px;
+}
+.maydon .hisob .musobaqa {
+  font-family: "GothamProLight";
+  font-size: 13px;
+}
+.maydon .hisob .musobaqa .komanda {
+  height: 33px;
+  padding-top: 8px;
+}
+.maydon .hisob .musobaqa .mezbon,
+.maydon .hisob .musobaqa .mehmon {
+  padding: 0px !important;
+}
+.maydon .hisob .musobaqa .mezbon {
+  padding-right: 0px;
+  text-align: right;
+}
+.maydon .hisob .musobaqa .mehmon {
+  padding-left: 0px;
+  text-align: left;
+}
+.maydon .hisob .musobaqa .xisob {
+  color: #696969;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 12px;
+  padding-top: 2px;
+  width: 60px;
+}
+.maydon .hisob .musobaqa .page {
+  background: #4c0760;
+  font-size: 12px;
+  padding: 3px 10px;
+}
+.maydon .hisob .musobaqa .page a {
+  color: white;
+}
+.maydon .hisob .musobaqa .page a:hover,
+.maydon .hisob .musobaqa .page a:focus {
+  text-decoration: none;
+}
+.maydon .panel1 {
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+.maydon .panel1 .panel-heading {
+  background: #4c0760;
+  color: white;
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 15px;
+  height: 55px;
+}
+.maydon .panel1 .panel-heading .btn {
+  width: 100%;
+  background: white;
+  color: #4c0760;
+}
+.maydon .panel1 .panel-heading .btn .glyphicon-arrow-left {
+  text-align: left;
+}
+.maydon .panel1 .panel-body {
+  padding-right: 0px;
+  padding-bottom: 10px;
+  border: 1px solid #4c0760;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px;
+}
+.maydon .panel1 .uyinchi,
+.maydon .panel1 .ochko,
+.maydon .panel1 .max_narx {
+  padding-top: 4px;
+  padding-right: 0px;
+}
+.maydon .panel1 .fudbolchi {
+  font-size: 14px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  margin-left: -10px;
+  margin-top: 3px;
+  color: #8c8c8c;
+  display: inline-block;
+}
+.maydon .panel1 .tanlash {
+  padding-right: 0px;
+}
+.maydon .panel1 select {
+  width: 90%;
+  border: 1px solid #4c0760;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  color: #8c8c8c;
+  padding: 0px 5px;
+  outline: 0;
+  background: url("../image/select.png") 95% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+.maydon .panel1 select:hover,
+.maydon .panel1 select:focus {
+  box-shadow: none;
+}
+.maydon .panel1 .form-control {
+  height: 25px;
+}
+.maydon .panel1 option {
+  background: white;
+  color: black;
+}
+.maydon .narxlar {
+  margin-top: 20px;
+}
+.maydon .narxlar .bordered {
+  border: 1px solid #4c0760;
+  border-bottom: none;
+}
+.maydon .narxlar .table {
+  border-collapse: separate !important;
+  border-radius: 5px 5px 0px 0px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  border-bottom: none;
+}
+.maydon .narxlar .table .sarlavha {
+  background: #4c0760;
+  color: white;
+}
+.maydon .narxlar .table .sarlavha th {
+  border-bottom: none;
+}
+.maydon .narxlar .table .sarlavha a {
+  color: white;
+}
+.maydon .narxlar .table td {
+  border: none;
+  color: #8c8c8c;
+}
+.maydon .narxlar .table td a {
+  color: #8c8c8c;
+}
+.maydon .narxlar .table td a:hover,
+.maydon .narxlar .table td a:focus {
+  color: #4c0760;
+  text-decoration: none;
+}
+.maydon .narxlar .table .button {
+  width: 20px;
+}
+.maydon .narxlar .table .info {
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+}
+.maydon .narxlar .table .yomon {
+  background: #FF0101;
+}
+.maydon .narxlar .table .yahshi {
+  background: #10BC12;
+}
+.maydon .narxlar .table .kasal {
+  background: #FFFC01;
+}
+.maydon .narxlar .varoqlash {
+  margin-top: -30px;
+  border: 1px solid #4c0760;
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
+}
+.maydon .narxlar .varoqlash .pagination {
+  margin-bottom: 5px;
+}
+.maydon .narxlar .varoqlash .pagination a {
+  border: none;
+  color: #A4A4A4;
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 15px;
+}
+.maydon .narxlar .varoqlash .pagination a:hover,
+.maydon .narxlar .varoqlash .pagination a:focus {
+  color: #4c0760;
+  background: none;
+}
+.maydon .narxlar2 a:hover,
+.maydon .narxlar2 a:focus {
+  text-decoration: none;
+}
+.maydon .narxlar2 .table {
+  border-bottom: 1px solid #4c0760;
+  border-radius: 6px 6px 6px 6px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  padding-bottom: 10px;
+}
+.maydon .narxlar2 .table .sarlavha:first-child {
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+.maydon .narxlar2 .table .text-center {
+  color: black;
+  text-align: right;
+}
+.maydon .narxlar2 .table .uzliga {
+  padding-bottom: 15px;
+}
+.maydon .narxlar2 .table tbody .uyinlar,
+.maydon .narxlar2 .table tbody .ball {
+  color: black;
+  text-align: center;
+}
+.maydon .narxlar2 .table .text-left img {
+  width: 6px;
+}
+.maydon .narxlar2 .table .tepaga img,
+.maydon .narxlar2 .table .pastga img {
+  width: 10px;
+  margin-right: 5px;
+}
+.scroli {
+  height: 640px;
+  overflow: auto;
+}
+footer {
+  background-image: -ms-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -moz-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -o-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #330B5F), color-stop(30, #3B0A5F), color-stop(65, #480860), color-stop(82.5, #520661), color-stop(91.25, #520661), color-stop(100, #520661));
+  background-image: -webkit-linear-gradient(top, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  background-image: linear-gradient(to bottom, #330B5F 0%, #3B0A5F 30%, #480860 65%, #520661 82.5%, #520661 91.25%, #520661 100%);
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+footer .komanda {
+  width: 60%;
+  opacity: 0.2;
+  position: absolute;
+  left: 20%;
+  height: 44%;
+}
+footer .yozuvi {
+  color: white;
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 14px;
+}
+footer .yozuvi h2 {
+  font-size: 34px;
+  font-family: "GillSans-UltraBold";
+  line-height: 30px;
+}
+footer .yozuvi h4 {
+  font-family: 'MS Reference Sans Serif';
+  font-size: 30px;
+  line-height: 15px;
+}
+footer .bir p {
+  padding-top: 40px;
+}
+footer .ikki {
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+footer .ikki ul {
+  text-align: left;
+}
+footer .ikki ul li {
+  padding-top: 15px;
+}
+footer .ikki ul li a {
+  color: white;
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 16px;
+}
+footer .ikki ul li a:hover,
+footer .ikki ul li a:focus {
+  text-decoration: none;
+}
+footer .ikki .ikonka {
+  background: white;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  border-radius: 100%;
+  z-index: 100;
+  margin-left: 10px;
+}
+footer .ikki .ikonka:first-child {
+  margin-left: 0px;
+}
+footer .ikki .ikonka:hover,
+footer .ikki .ikonka:focus {
+  background: #00C419;
+}
+footer .ikki .ikonka img {
+  width: 100%;
+}
+footer .ikki .sotsial {
+  text-align: left;
+  margin-top: 15px;
+}
+footer .uch {
+  text-align: center;
+}
+footer .uch img {
+  width: 130px;
+}
+footer .eslatma {
+  border-top: 1px solid white;
+  padding-top: 15px;
+  color: white;
+  font-size: 14px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  text-align: center;
+  margin-top: 20px;
+}
+.menyu {
+  background: #FFFF00;
+}
+.menyu .navbar-default {
+  background: none;
+  border: none;
+  margin-bottom: 0px;
+}
+.menyu .navbar-default .navbar-header button {
+  background: yellow;
+  border: 1px solid #4c0760;
+  float: none;
+}
+.menyu .navbar-default .navbar-header button span {
+  background: #4c0760;
+  color: #4c0760;
+}
+.menyu .navbar-default .navbar-collapse {
+  padding-left: 0px;
+}
+.menyu .navbar-default li {
+  position: relative;
+}
+.menyu .navbar-default li img {
+  width: 30px;
+  left: 18%;
+}
+.menyu .navbar-default li a {
+  color: #3e0960;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: Tahoma;
+}
+.menyu .navbar-default li a:hover,
+.menyu .navbar-default li a:focus {
+  color: #3e0960;
+}
+.menyu .navbar-default li a:hover img,
+.menyu .navbar-default li a:focus img {
+  -webkit-animation-name: yunalish, animatsiya;
+  animation-name: yunalish, animatsiya;
+  -webkit-animation-duration: .2s, 1s;
+  animation-duration: .2s, 1s;
+  -webkit-animation-delay: 0s, .2s;
+  animation-delay: 0s, .2s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+@-webkit-keyframes animatsiya {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+@keyframes animatsiya {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes yunalish {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes yunalish {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.dedlayn {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.dedlayn .container {
+  color: #3e0960;
+  background: #ebebeb;
+  border-radius: 8px;
+  padding: 10px 0px;
+}
+.dedlayn .tur {
+  font-size: 18px;
+  text-align: center;
+  font-family: "HelveticaNeueLTStd-BdCn";
+}
+.dedlayn .tur p {
+  font-size: 40px;
+  padding-top: 10px;
+  font-family: "HelveticaNeueLTStd-Roman";
+}
+.dedlayn .dedline,
+.dedlayn .news {
+  font-size: 18px;
+  text-align: center;
+  font-family: "HelveticaNeueLTStd-BdCn";
+}
+.dedlayn .dedline p,
+.dedlayn .news p {
+  font-family: "GothamProLight";
+  color: black;
+  font-size: 16px;
+}
+.dedlayn .dedline .status,
+.dedlayn .news .status {
+  font-size: 18px;
+  text-align: center;
+  font-family: "HelveticaNeueLTStd-BdCn";
+  padding-bottom: 15px;
+}
+.dedlayn .dedline .tugmalar,
+.dedlayn .news .tugmalar {
+  margin-top: 9px;
+}
+.dedlayn .dedline .tugmalar button,
+.dedlayn .news .tugmalar button {
+  text-transform: capitalize;
+  background: #4c0760;
+  color: white;
+  font-size: 14px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  border: 1px solid #3e0960;
+  transition: 1s;
+  cursor: pointer;
+}
+.dedlayn .dedline .tugmalar button:hover,
+.dedlayn .news .tugmalar button:hover,
+.dedlayn .dedline .tugmalar button:focus,
+.dedlayn .news .tugmalar button:focus {
+  background: white;
+  border: 1px solid #3e0960;
+  color: #3e0960;
+}
+.dedlayn .dedline .tugmalar2,
+.dedlayn .news .tugmalar2 {
+  text-align: center;
+}
+.dedlayn .dedline select,
+.dedlayn .news select {
+  width: 90%;
+  border: 1px solid #4c0760;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "HelveticaNeueLTStd-Roman";
+  color: #3e0960;
+  padding: 0px 5px;
+  outline: 0;
+  background: url("../image/select.png") 95% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+.dedlayn .dedline select:hover,
+.dedlayn .news select:hover,
+.dedlayn .dedline select:focus,
+.dedlayn .news select:focus {
+  box-shadow: none;
+}
+.dedlayn .statuss {
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-size: 16px;
+  font-weight: 700;
+}
+.dedlayn .statuss h3 {
+  color: red;
+  font-family: "HelveticaNeueLTStd-BdCn";
+  font-size: 30px;
+}
+.dedlayn .news span {
+  color: red;
+  padding-right: 10px;
+}
+.dedlayn .news p {
+  color: #3e0960;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: auto !important;
+    padding-left: 10px !important;
+  }
+  header img {
+    width: 100%;
+  }
+  header p {
+    font-size: 17px;
+  }
+  .narxlar2 .table th {
+    padding: 0px;
+  }
+  .narxlar2 .table tbody .klub {
+    font-size: 12px;
+  }
+  .narxlar2 .table tbody .uyinlar,
+  .narxlar2 .table tbody .ball {
+    font-size: 12px;
+  }
+  .maydon .tugmalar button {
+    font-size: 13px;
+  }
+  .maydon .stadion {
+    margin-left: 5%;
+  }
+  .maydon .stadion .yashil {
+    height: 530px;
+  }
+  .maydon .zahira {
+    background: #e8e8e8;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-left: -4.5%;
+    width: 120%;
+  }
+  footer .eslatma {
+    font-size: 13px;
+  }
+  .menyu .navbar-default li img {
+    width: 22px;
+  }
+  .menyu .navbar-default li a {
+    font-size: 16px;
+  }
+  .dedlayn .dedline p,
+  .dedlayn .news p {
+    font-size: 15px;
+  }
+  .dedlayn .dedline .tugmalar button,
+  .dedlayn .news .tugmalar button {
+    font-size: 12px;
+  }
+  .dedlayn .dedline .tugmalar button:first-child,
+  .dedlayn .news .tugmalar button:first-child {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1150px) {
+  .maydon .stadion img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+  .maydon .stadion img {
+    width: 100%;
+  }
+  .maydon .stadion .uyinchi {
+    margin-top: 55px;
+  }
+  .maydon .stadion .about {
+    width: 80px;
+  }
+  .menyu .navbar-default li img {
+    width: 20px;
+  }
+  .menyu .navbar-default li a {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1050px) {
+  .maydon .stadion img {
+    width: 100%;
+  }
+  .maydon .stadion .uyinchi {
+    margin-top: 65px;
+  }
+  .maydon .stadion .about {
+    width: 70px;
+  }
+  .menyu .navbar-default li img {
+    width: 20px;
+  }
+  .menyu .navbar-default li a {
+    font-size: 15px;
+    padding-left: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: auto !important;
+    padding-left: 10px !important;
+  }
+  header {
+    padding-bottom: 0px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  header h4 {
+    font-size: 25px;
+  }
+  header p {
+    font-size: 15px;
+  }
+  header img {
+    width: 100%;
+  }
+  header .list-group {
+    margin-bottom: 0px;
+  }
+  .maydon .stadion .yashil {
+    height: 100%;
+    margin-top: 5px;
+    margin-left: -3.5%;
+    margin-right: -3.5%;
+    padding-bottom: 15px;
+  }
+  .maydon .stadion .about {
+    left: 10%;
+  }
+  .maydon .jamoa_nomi {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .maydon .jamoa_nomi .satr {
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .maydon .jamoa_nomi .form-control {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .maydon .zahira {
+    background: #e8e8e8;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-left: 0%;
+    width: 100%;
+  }
+  footer .eslatma {
+    font-size: 13px;
+  }
+  footer .bir p {
+    padding-top: 20px;
+  }
+  .menyu .navbar-default li img {
+    width: 18px;
+  }
+  .menyu .navbar-default li a {
+    font-size: 13.5px;
+    padding-left: 0px;
+  }
+  .dedlayn .dedline p,
+  .dedlayn .news p {
+    font-family: "GothamProLight";
+    color: black;
+    font-size: 16px;
+  }
+  .dedlayn .statuss {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 850px) {
+  header p {
+    font-size: 13px;
+  }
+  header img {
+    width: 100%;
+  }
+  header .list-group {
+    margin-bottom: 0px;
+  }
+  header .list-group li a {
+    font-size: 14px;
+  }
+  .maydon .stadion .about {
+    left: 5%;
+  }
+  .menyu .navbar-default li img {
+    width: 14px;
+  }
+  .menyu .navbar-default li a {
+    font-size: 13px;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: auto !important;
+    padding-left: 10px !important;
+  }
+  header {
+    padding-top: 0;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  header h2 {
+    font-size: 60px;
+  }
+  header h4 {
+    font-size: 40px;
+    padding-top: 15px;
+  }
+  header p {
+    font-size: 25px;
+  }
+  header img {
+    width: 100%;
+  }
+  header .list-group {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  header .list-group .dropdown {
+    margin-left: 36%;
+    min-width: 220px;
+  }
+  header .list-group .dropdown-menu {
+    min-width: 220px;
+    text-align: center;
+  }
+  header .list-group li a {
+    font-size: 20px;
+  }
+  .maydon .jamoa p {
+    text-align: center;
+    font-size: 25px;
+  }
+  .maydon .jadval h6 {
+    font-size: 20px;
+  }
+  .maydon .jadval h5 {
+    font-size: 18px;
+  }
+  .maydon .tugmalar2 button {
+    width: 90%;
+  }
+  .maydon .tugmalar {
+    text-align: center;
+  }
+  .maydon .tugmalar .col-md-4:last-child {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .maydon .stadion .yashil {
+    height: 100%;
+    margin-top: 10px;
+    margin-left: -5%;
+    margin-right: -5%;
+    padding-bottom: 15px;
+  }
+  .maydon .stadion .glyphicon-info-sign {
+    font-size: 15px;
+    position: absolute;
+    left: 10%;
+  }
+  .maydon .stadion .glyphicon-remove-sign {
+    font-size: 15px;
+    margin-left: 60%;
+  }
+  .maydon .stadion .about {
+    left: 0%;
+    width: 60px;
+  }
+  .maydon .stadion .about .ism {
+    font-size: 11px;
+  }
+  .maydon .stadion .about .raqam {
+    font-size: 12px;
+  }
+  .maydon .stadion img {
+    width: 100%;
+  }
+  .maydon .jamoa_nomi {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .maydon .jamoa_nomi .satr {
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .maydon .jamoa_nomi .form-control {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .maydon .zahira img {
+    width: 50%;
+  }
+  .maydon .zahira p {
+    font-size: 14px;
+  }
+  .maydon .zahira .bottom-top {
+    margin-left: 20px;
+    width: 15px;
+    margin-top: -10px;
+  }
+  .maydon .zahira .glyphicon-info-sign {
+    font-size: 15px;
+    position: absolute;
+    left: 10%;
+    top: 0px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .komanda {
+    width: 90%;
+    left: 5%;
+    height: 60%;
+  }
+  footer .eslatma {
+    font-size: 13px;
+  }
+  footer .bir p {
+    padding-top: 20px;
+  }
+  footer .ikki {
+    padding-left: 0;
+  }
+  footer .ikki ul {
+    text-align: center;
+  }
+  footer .ikki .sotsial {
+    text-align: center;
+  }
+  footer .ikki .ikonka {
+    text-align: center;
+  }
+  .menyu .navbar-default li a {
+    padding-left: 50px;
+  }
+  .dedlayn {
+    margin-top: 0px;
+  }
+  .dedlayn .container {
+    padding-left: 0px !important;
+  }
+  .dedlayn .container {
+    border-radius: 0px;
+  }
+  .dedlayn .dedline select,
+  .dedlayn .news select {
+    float: none;
+    width: 80%;
+  }
+  .dedlayn .news {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .list-group .dropdown {
+    margin-left: 32%;
+    min-width: 220px;
+  }
+  .maydon .stadion .glyphicon-remove-sign {
+    margin-left: 60%;
+  }
+}
+@media screen and (max-width: 630px) {
+  .maydon .stadion .about {
+    left: 10%;
+    width: 50px;
+  }
+  .maydon .stadion .about .ism {
+    font-size: 11px;
+  }
+  .maydon .stadion .about .raqam {
+    font-size: 12px;
+  }
+  .maydon .stadion img {
+    width: 120%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .maydon .zahira p {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  .maydon .zahira .about {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 535px) {
+  .maydon .stadion .yashil {
+    padding-bottom: 20px;
+  }
+  .maydon .stadion .glyphicon-remove-sign {
+    margin-left: 75%;
+  }
+  .maydon .stadion .about {
+    left: 10%;
+    width: 50px;
+  }
+  .maydon .stadion img {
+    width: 150%;
+  }
+  .maydon .jamoa_nomi .checkbox {
+    font-size: 13px;
+  }
+  .maydon .jamoa_nomi .eslatma {
+    font-size: 13px;
+  }
+  .maydon .panel1 .panel-body {
+    padding-left: 3px;
+    padding-right: 15px;
+  }
+  .maydon .panel1 .panel-heading {
+    font-size: 13px;
+  }
+  .maydon .panel1 .fudbolchi {
+    font-size: 13px;
+  }
+  .maydon .panel1 select {
+    font-size: 13px;
+  }
+  .maydon .narxlar {
+    font-size: 13px;
+  }
+  footer .eslatma {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .maydon .stadion .yashil {
+    padding-bottom: 30px;
+  }
+  .maydon .stadion .glyphicon-remove-sign {
+    margin-left: 130%;
+  }
+  .maydon .stadion .about {
+    left: 6%;
+    width: 50px;
+  }
+  .maydon .stadion img {
+    width: 180%;
+  }
+  .maydon .musobaqa .col-xs-5 {
+    width: 40%;
+  }
+  .maydon .musobaqa .xisob {
+    width: auto;
+  }
+  .dedlayn {
+    margin-top: 0px;
+  }
+  .dedlayn .container {
+    padding-left: 0px !important;
+  }
+  .dedlayn .container {
+    border-radius: 0px;
+  }
+  .dedlayn .dedline select,
+  .dedlayn .news select {
+    float: none;
+    width: 80%;
+  }
+  .dedlayn .news {
+    margin-top: 20px;
+  }
+  .dedlayn .statuss .secondd {
+    margin-top: 40px;
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .list-group .dropdown {
+    margin-left: 28%;
+    min-width: 220px;
+  }
+  .maydon .zahira p {
+    font-size: 14px;
+    padding-top: 18px;
+  }
+  .maydon .zahira .about {
+    left: 12%;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header p {
+    font-size: 18px;
+  }
+  header .list-group .dropdown {
+    margin-left: 21%;
+    min-width: 200px;
+  }
+  header .list-group .dropdown-menu {
+    min-width: 200px;
+    text-align: center;
+  }
+  .narxlar2 .table th {
+    padding: 0px;
+  }
+  .narxlar2 .table tbody .klub {
+    font-size: 12px;
+  }
+  .narxlar2 .table tbody .uyinlar,
+  .narxlar2 .table tbody .ball {
+    font-size: 12px;
+  }
+  .maydon .stadion .yashil {
+    padding-bottom: 30px;
+    margin-left: -12%;
+    margin-right: -12%;
+    padding-right: 0px;
+  }
+  .maydon .stadion .glyphicon {
+    font-size: 14px;
+  }
+  .maydon .stadion .glyphicon-remove-sign {
+    margin-left: 90%;
+    top: -5%;
+  }
+  .maydon .stadion .about {
+    left: 6%;
+    width: 40px;
+  }
+  .maydon .stadion .about .ism {
+    font-size: 10px;
+  }
+  .maydon .stadion img {
+    width: 45px;
+  }
+  .maydon .hisob .musobaqa {
+    text-align: center;
+  }
+  .maydon .hisob .musobaqa .col-xs-5 {
+    width: auto;
+    text-align: center;
+  }
+  .maydon .hisob .musobaqa .xisob {
+    width: 40px;
+    padding: 0px;
+  }
+  .maydon .hisob .musobaqa .col-xs-2 {
+    padding: 0px;
+  }
+  .maydon .panel .panel-heading {
+    text-align: center;
+  }
+  .maydon .panel .panel-heading .btn {
+    width: 70%;
+    font-size: 12px;
+  }
+  .maydon .zahira p {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  .maydon .zahira .about {
+    left: 12%;
+    width: 60px;
+  }
+  .maydon .zahira .bottom-top {
+    margin-left: 15px;
+    margin-top: -20px;
+  }
+  .maydon .zahira img {
+    width: 70%;
+  }
+  .maydon .zahira .glyphicon-info-sign {
+    font-size: 15px;
+    left: -15%;
+    top: -5px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .maydon .stadion .glyphicon-remove-sign {
+    margin-left: 85%;
+    top: -5%;
+  }
+  .maydon .ruyhat button {
+    width: 80%;
+  }
+  .maydon .hisob .musobaqa .col-xs-5 {
+    width: auto;
+    padding: 0px;
+  }
+  .maydon .hisob .musobaqa .xisob {
+    width: auto;
+    padding: 0px;
+  }
+  .maydon .hisob .musobaqa .col-xs-2 {
+    padding: 0px;
+  }
+  .maydon .zahira p {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+  .maydon .zahira .about {
+    left: 10%;
+    width: 50px;
+  }
+  .maydon .zahira img {
+    width: 90%;
+  }
+  .maydon .zahira .bottom-top {
+    margin-left: 15px;
+    margin-top: -20px;
+  }
+  .maydon .zahira .glyphicon-info-sign {
+    font-size: 15px;
+    left: -15%;
+    top: -5px;
+  }
+}
